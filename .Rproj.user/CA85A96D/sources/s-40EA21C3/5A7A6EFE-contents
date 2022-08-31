@@ -1,0 +1,11 @@
+^.*\.Rproj$
+^\.Rproj\.user$
+^LICENSE\.md$
+^doc$
+^Meta$
+^data-dev$
+^README\.Rmd$
+^appveyor\.yml$
+^\.travis\.yml$
+^codecov\.yml$
+^\.github$
