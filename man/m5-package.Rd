@@ -4,7 +4,7 @@
 \name{m5-package}
 \alias{m5-package}
 \alias{m5}
-\title{m5: M5 Walmart Challenge Data}
+\title{m5: M5 Walmart Challenge Datausethi}
 \author{
 Krzysztof Joachimiak
 }

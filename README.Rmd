@@ -1,0 +1,49 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# m5 <img src='man/figures/logo-small.png' align="right" height="139" />
+
+> M5 Walmart Challenge Data
+
+## Installation
+
+You can install the development version of m5 from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("krzjoa/m5")
+```
+
+## Usage
+
+```{r eval=FALSE}
+library(m5)
+library(zeallot)
+
+DIR <- 'sample/directory'
+
+# Downloading the data
+m5_download(DIR)
+
+# Loading the data
+c(sales_train,
+   sales_test,
+   sell_prices,
+   calendar) %<-% m5_get_raw_evaluation(DIR)
+   
+# Preparing the data
+m5_data  <-
+   m5_prepare(sales_train, sales_test, calendar, sell_prices)
+```

@@ -17,6 +17,7 @@ name the file was downloaded into.}
 Download and unzip the raw data to the specified directory
 }
 \examples{
+\dontrun{
 m5_download('data')
-
+}
 }

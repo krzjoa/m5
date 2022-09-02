@@ -1,4 +1,4 @@
-#' m5: M5 Walmart Challenge Data
+#' m5: M5 Walmart Challenge Datausethi
 #'
 #' @author Krzysztof Joachimiak
 #' @keywords package

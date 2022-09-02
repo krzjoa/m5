@@ -6,8 +6,9 @@
 #' name the file was downloaded into.
 #'
 #' @examples
+#' \dontrun{
 #' m5_download('data')
-#'
+#' }
 #' @export
 m5_download <- function(path, unzip=TRUE){
   url <- "https://github.com/krzjoa/m5-data/raw/main/datasets/m5.zip"

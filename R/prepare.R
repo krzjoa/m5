@@ -8,16 +8,19 @@
 #' @examples
 #' library(m5)
 #' library(zeallot)
-#'
+#' \dontrun{
 #' m5_download('data')
 #' c(sales_train,
 #'   sales_test,
 #'   sell_prices,
 #'   calendar) %<-% m5_get_raw_evaluation('data')
+#'
+#'
 #' m5_data  <-
 #'    m5_prepare(sales_train, sales_test, calendar, sell_prices)
+#' }
 #'
-#' @import dplyr lubridate stringi
+#' @import dplyr lubridate stringi data.table
 #' @export
 m5_prepare <- function(sales_train, sales_test,
                        calendar, sell_prices){
@@ -28,16 +31,13 @@ m5_prepare <- function(sales_train, sales_test,
   sales_test_long <- sales_test %>%
     tidyr::pivot_longer(cols = starts_with("d_"))
 
-  data.table::setnames(sales_train_long, "name", "d")
-  data.table::setnames(sales_test_long, "name", "d")
+  setnames(sales_train_long, "name", "d")
+  setnames(sales_test_long, "name", "d")
+  setDT(sales_train_long)
+  setDT(sales_test_long)
 
-  sales_train_long <-
-    sales_train_long %>%
-    mutate(d = as.integer(d))
-
-  sales_test_long <-
-    sales_test_long %>%
-    mutate(d = as.integer(d))
+  sales_train_long[, d := as.integer(d)]
+  sales_test_long[, d := as.integer(d)]
 
   # Prepare calendar
   calendar <-
@@ -55,7 +55,6 @@ m5_prepare <- function(sales_train, sales_test,
       sales_train_long,
       sales_test_long
     )%>%
-    # select(-id) %>%
     mutate(across(where(is.factor), as.character))
 
   rm(sales_test_long)

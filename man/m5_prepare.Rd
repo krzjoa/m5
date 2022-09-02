@@ -21,13 +21,16 @@ Prepare the ready-to-use M5 data in one data.frame
 \examples{
 library(m5)
 library(zeallot)
-
+\dontrun{
 m5_download('data')
 c(sales_train,
   sales_test,
   sell_prices,
   calendar) \%<-\% m5_get_raw_evaluation('data')
+
+
 m5_data  <-
    m5_prepare(sales_train, sales_test, calendar, sell_prices)
+}
 
 }

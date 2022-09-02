@@ -1,5 +1,5 @@
 #' @name m5_get_raw_*
-#' Load raw CSV files using data.table::fread function
+#' @title Load raw CSV files using data.table::fread function
 #'
 #' @param path The directory with the unzipped M5 data files
 #'
@@ -16,6 +16,7 @@
 #' [m5-forecasts repo by Nixtla](https://github.com/Nixtla/m5-forecasts)
 #'
 #' @examples
+#' \dontrun{
 #' library(m5)
 #' library(zeallot)
 #'
@@ -24,7 +25,14 @@
 #'   sales_test,
 #'   sell_prices,
 #'   calendar) %<-% m5_get_raw_evaluation('data')
+#' }
+#' @export
 NULL
+
+.abstract_get_raw <- function(path, files){
+  files <- file.path(path, files)
+  Map(data.table::fread, files)
+}
 
 #' @rdname m5_get_raw_*
 #' @export
@@ -36,8 +44,7 @@ m5_get_raw_evaluation <- function(path){
     'calendar.csv',
     'weights_evaluation.csv'
   )
-  files <- file.path(path, files)
-  Map(data.table::fread, files)
+  .abstract_get_raw(path, files)
 }
 
 #' @rdname m5_get_raw_*
@@ -50,6 +57,5 @@ m5_get_raw_validation <- function(path){
     'calendar.csv',
     'weights_validation.csv'
   )
-  files <- file.path(path, files)
-  Map(data.table::fread, files)
+  .abstract_get_raw(path, files)
 }

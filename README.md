@@ -1,30 +1,38 @@
-# m5
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+# m5 <img src='man/figures/logo-small.png' align="right" height="139" />
+
 > M5 Walmart Challenge Data
 
 ## Installation
 
-For the moment, this package can be installed using:
+You can install the development version of m5 from
+[GitHub](https://github.com/) with:
 
-```r
+``` r
+# install.packages("devtools")
 devtools::install_github("krzjoa/m5")
 ```
 
 ## Usage
 
-```r
+``` r
 library(m5)
 library(zeallot)
 
+DIR <- 'sample/directory'
+
 # Downloading the data
-m5_download('sample/directory')
+m5_download(DIR)
 
 # Loading the data
 c(sales_train,
    sales_test,
    sell_prices,
-   calendar) %<-% m5_get_raw_evaluation('data')
+   calendar) %<-% m5_get_raw_evaluation(DIR)
    
 # Preparing the data
-> m5_data  <-
+m5_data  <-
    m5_prepare(sales_train, sales_test, calendar, sell_prices)
 ```
