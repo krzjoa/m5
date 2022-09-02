@@ -1,4 +1,4 @@
-#' @name m5_get_raw_*
+#' @name m5_get_raw
 #' @title Load raw CSV files using data.table::fread function
 #'
 #' @param path The directory with the unzipped M5 data files
@@ -26,7 +26,6 @@
 #'   sell_prices,
 #'   calendar) %<-% m5_get_raw_evaluation('data')
 #' }
-#' @export
 NULL
 
 .abstract_get_raw <- function(path, files){
