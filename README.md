@@ -28,8 +28,9 @@ devtools::install_github("krzjoa/m5")
 ``` r
 library(m5)
 library(zeallot)
+library(ggplot2)
 
-DIR <- 'sample/directory'
+DIR <- 'data'
 
 # Downloading the data
 m5_download(DIR)
@@ -38,9 +39,28 @@ m5_download(DIR)
 c(sales_train,
    sales_test,
    sell_prices,
-   calendar) %<-% m5_get_raw_evaluation(DIR)
+   calendar,
+   weights) %<-% m5_get_raw_evaluation(DIR)
    
 # Preparing the data
 m5_data  <-
    m5_prepare(sales_train, sales_test, calendar, sell_prices)
+
+# Demand classification
+m5_demand <- m5_demand_type(m5_data)
+
+foods_1_demand <- 
+  m5_demand[startsWith(as.character(m5_demand$item_id), "FOODS_1")]
+
+plot <-
+  ggplot(foods_1_demand) +
+  geom_point(aes(log(cv2), log(adi),
+                 item_id = item_id, col = demand_type)) +
+  geom_hline(yintercept = log(1.32)) +
+  geom_vline(xintercept = log(0.49)) +
+  theme_minimal()
+
+plot
 ```
+
+<img src="man/figures/README-unnamed-chunk-2-1.png" width="100%" />

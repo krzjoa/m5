@@ -24,7 +24,8 @@
 #' c(sales_train,
 #'   sales_test,
 #'   sell_prices,
-#'   calendar) %<-% m5_get_raw_evaluation('data')
+#'   calendar,
+#'   ) %<-% m5_get_raw_evaluation('data')
 #' }
 NULL
 

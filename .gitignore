@@ -1,3 +1,4 @@
 *.csv
 *.zip
 .Rproj.user
+inst/doc

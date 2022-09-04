@@ -12,12 +12,10 @@
 #' @export
 m5_download <- function(path, unzip=TRUE){
   url <- "https://github.com/krzjoa/m5-data/raw/main/datasets/m5.zip"
-  is_dir <- file.info(path)$isdir
-  if (!is.na(is_dir))
-    if (is_dir)
-      path <- file.path(path, "m5.zip")
+  if (!file.exists(path))
+    dir.create(path)
+  path <- file.path(path, "m5.zip")
   download.file(url, path)
-
   if (unzip)
     utils::unzip(path, exdir = dirname(path))
 }

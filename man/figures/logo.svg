@@ -12,12 +12,12 @@
    data-name="Layer 1"
    viewBox="0 0 735 852"
    version="1.1"
-   sodipodi:docname="logo_w.svg"
+   sodipodi:docname="logo.svg"
    inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)"
    enable-background="new"
-   inkscape:export-filename="/home/krzysztof/Pulpit/Rlibs/torchts/man/figures/logo-small.png"
-   inkscape:export-xdpi="15.71"
-   inkscape:export-ydpi="15.71">
+   inkscape:export-filename="/home/krzysztof/Pulpit/m5/man/figures/logo-small.png"
+   inkscape:export-xdpi="15.67347"
+   inkscape:export-ydpi="15.67347">
   <metadata
      id="metadata127">
     <rdf:RDF>
@@ -44,8 +44,8 @@
      id="namedview125"
      showgrid="false"
      inkscape:zoom="0.41560563"
-     inkscape:cx="104.66407"
-     inkscape:cy="302.29037"
+     inkscape:cx="-620.92451"
+     inkscape:cy="292.66586"
      inkscape:window-x="72"
      inkscape:window-y="27"
      inkscape:window-maximized="1"

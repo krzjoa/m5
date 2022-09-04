@@ -16,7 +16,10 @@ m5_prepare(sales_train, sales_test, calendar, sell_prices)
 \item{sell_prices}{A data.frame with M5 sell_prices}
 }
 \description{
-Prepare the ready-to-use M5 data in one data.frame
+It's a memory-efficient function, which uses `data.table` under the hood.
+However, it still not recommended to use this function on PCs with < 16GB RAM.
+In such case, consider to use a custom solution
+based on `[arrow](https://arrow.apache.org/docs/r/)` or `[disk.frame](https://diskframe.com/index.html)`
 }
 \examples{
 library(m5)
@@ -27,7 +30,6 @@ c(sales_train,
   sales_test,
   sell_prices,
   calendar) \%<-\% m5_get_raw_evaluation('data')
-
 
 m5_data  <-
    m5_prepare(sales_train, sales_test, calendar, sell_prices)
