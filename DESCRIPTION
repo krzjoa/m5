@@ -13,6 +13,8 @@ Description: Contains functions, which facilitate downloading, loading and prepa
   It also includes a ready-to-use built-in M5 subset named `tiny_m5`.
 Encoding: UTF-8
 LazyData: true
+BugReports: https://github.com/krzjoa/m5/issues
+URL: https://github.com/krzjoa/m5, https://krzjoa.github.io/m5/
 RoxygenNote: 7.1.2
 License: MIT + file LICENSE
 Suggests: 
