@@ -1,4 +1,6 @@
 ~%2FPulpit%2Fm5%2F.Rbuildignore="F2DD8784"
+~%2FPulpit%2Fm5%2F.github%2Fworkflows%2FR-CMD-check.yaml="30040A37"
+~%2FPulpit%2Fm5%2F.github%2Fworkflows%2Fcheck-standard.yaml="B8A6A904"
 ~%2FPulpit%2Fm5%2F.gitignore="0979B7C7"
 ~%2FPulpit%2Fm5%2FDESCRIPTION="E2DB8394"
 ~%2FPulpit%2Fm5%2FLICENSE="358AC34D"
