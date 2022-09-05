@@ -5,7 +5,7 @@
 #' It also includes a ready-to-use built-in M5 subset named `tiny_m5`.
 #'
 #' @author Krzysztof Joachimiak
-#' @keywords package
+#' @keywords package internal
 #' @name m5-package
 #' @aliases m5
 #' @docType package

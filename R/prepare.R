@@ -24,7 +24,7 @@
 #'    m5_prepare(sales_train, sales_test, calendar, sell_prices)
 #' }
 #'
-#' @import dplyr lubridate stringi data.table
+#' @import dplyr data.table
 #' @export
 m5_prepare <- function(sales_train, sales_test,
                        calendar, sell_prices){

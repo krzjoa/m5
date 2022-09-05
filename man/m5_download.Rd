@@ -10,7 +10,7 @@ m5_download(path, unzip = TRUE)
 \item{path}{A directory name to save the zip file}
 
 \item{unzip}{Automatically uznip the file when the downloading is finished.
-Default: TRUE. The `exdir` argument in the `unzip` function is the directory
+Default: TRUE. The \code{exdir} argument in the \code{unzip} function is the directory
 name the file was downloaded into.}
 }
 \description{
@@ -23,6 +23,8 @@ m5_download('data')
 
 }
 \references{
-* [M5 Forecasting - Accuracy](https://www.kaggle.com/c/m5-forecasting-accuracy)
-* [M5 Forecasting - Uncertainty](https://www.kaggle.com/c/m5-forecasting-uncertainty)
+\itemize{
+\item \href{https://www.kaggle.com/c/m5-forecasting-accuracy}{M5 Forecasting - Accuracy}
+\item \href{https://www.kaggle.com/c/m5-forecasting-uncertainty}{M5 Forecasting - Uncertainty}
+}
 }

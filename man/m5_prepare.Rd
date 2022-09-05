@@ -16,10 +16,10 @@ m5_prepare(sales_train, sales_test, calendar, sell_prices)
 \item{sell_prices}{A data.frame with M5 sell_prices}
 }
 \description{
-It's a memory-efficient function, which uses `data.table` under the hood.
+It's a memory-efficient function, which uses \code{data.table} under the hood.
 However, it still not recommended to use this function on PCs with < 16GB RAM.
 In such case, consider to use a custom solution
-based on `[arrow](https://arrow.apache.org/docs/r/)` or `[disk.frame](https://diskframe.com/index.html)`
+based on \verb{[arrow](https://arrow.apache.org/docs/r/)} or \verb{[disk.frame](https://diskframe.com/index.html)}
 }
 \examples{
 library(m5)

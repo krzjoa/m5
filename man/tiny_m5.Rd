@@ -40,12 +40,12 @@ M5 is a challenge from a series organized by Spyros Makridakis.
 head(tiny_m5)
 }
 \seealso{
-[M5 Forecasting - Accuracy](https://www.kaggle.com/c/m5-forecasting-accuracy)
+\href{https://www.kaggle.com/c/m5-forecasting-accuracy}{M5 Forecasting - Accuracy}
 
-[M5 Forecasting - Uncertainty](https://www.kaggle.com/c/m5-forecasting-uncertainty)
+\href{https://www.kaggle.com/c/m5-forecasting-uncertainty}{M5 Forecasting - Uncertainty}
 
-[The M5 competition: Background, organization, and implementation](https://www.sciencedirect.com/science/article/pii/S0169207021001187)
+\href{https://www.sciencedirect.com/science/article/pii/S0169207021001187}{The M5 competition: Background, organization, and implementation}
 
-[Other Walmart datasets in timetk](https://business-science.github.io/timetk/reference/index.html#section-time-series-datasets)
+\href{https://business-science.github.io/timetk/reference/index.html#section-time-series-datasets}{Other Walmart datasets in timetk}
 }
 \keyword{datasets}

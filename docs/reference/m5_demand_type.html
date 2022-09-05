@@ -60,23 +60,27 @@
     <div id="arguments">
     <h2>Arguments</h2>
     <dl><dt>data</dt>
-<dd><p>The result of the `m5_prepare` function.</p></dd>
+<dd><p>The result of the <code>m5_prepare</code> function.</p></dd>
+
 </dl></div>
     <div id="value">
     <h2>Value</h2>
-    <p>A `data.frame` containing item ids, ADI and CV2 scores as well as the final
+    
+
+<p>A <code>data.frame</code> containing item ids, ADI and CV2 scores as well as the final
 class chosen based on the aforementioned scores.</p>
     </div>
     <div id="details">
     <h2>Details</h2>
-    <p>* Smooth (ADI &lt; 1.32 and CV² &lt; 0.49).
-* Intermittent  (ADI &gt;= 1.32 and CV² &lt; 0.49)
-* Erratic (ADI &lt; 1.32 and CV² &gt;= 0.49)
-* Lumpy (ADI &gt;= 1.32 and CV² &gt;= 0.49)</p>
-    </div>
+    
+<ul><li><p>Smooth (ADI &lt; 1.32 and CV² &lt; 0.49).</p></li>
+<li><p>Intermittent  (ADI &gt;= 1.32 and CV² &lt; 0.49)</p></li>
+<li><p>Erratic (ADI &lt; 1.32 and CV² &gt;= 0.49)</p></li>
+<li><p>Lumpy (ADI &gt;= 1.32 and CV² &gt;= 0.49)</p></li>
+</ul></div>
     <div id="references">
     <h2>References</h2>
-    <p>[Forecast Error Measures: Intermittent Demand](https://deep-and-shallow.com/2020/10/07/forecast-error-measures-intermittent-demand/)</p>
+    <p><a href="https://deep-and-shallow.com/2020/10/07/forecast-error-measures-intermittent-demand/" class="external-link">Forecast Error Measures: Intermittent Demand</a></p>
     </div>
 
     <div id="ref-examples">
@@ -86,11 +90,10 @@ class chosen based on the aforementioned scores.</p>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="va">sales_train</span>,</span>
 <span class="r-in">  <span class="va">sales_test</span>,</span>
 <span class="r-in">  <span class="va">sell_prices</span>,</span>
-<span class="r-in">  <span class="va">calendar</span><span class="op">)</span> <span class="op"><a href="https://rdrr.io/pkg/zeallot/man/operator.html" class="external-link">%&lt;-%</a></span> <span class="fu">m5_get_raw_evaluation</span><span class="op">(</span><span class="st">'data'</span><span class="op">)</span></span>
+<span class="r-in">  <span class="va">calendar</span><span class="op">)</span> <span class="op"><a href="https://rdrr.io/pkg/zeallot/man/operator.html" class="external-link">%&lt;-%</a></span> <span class="fu"><a href="m5_get_raw.html">m5_get_raw_evaluation</a></span><span class="op">(</span><span class="st">'data'</span><span class="op">)</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="va">m5_data</span>  <span class="op">&lt;-</span></span>
 <span class="r-in">   <span class="fu"><a href="m5_prepare.html">m5_prepare</a></span><span class="op">(</span><span class="va">sales_train</span>, <span class="va">sales_test</span>, <span class="va">calendar</span>, <span class="va">sell_prices</span><span class="op">)</span></span>
-<span class="r-in"></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="va">m5_demand</span> <span class="op">&lt;-</span> <span class="fu">m5_demand_type</span><span class="op">(</span><span class="va">m5_data</span><span class="op">)</span></span>
 <span class="r-in"><span class="op">}</span></span>
@@ -105,13 +108,11 @@ class chosen based on the aforementioned scores.</p>
 
 
       <footer><div class="copyright">
-  <p></p><p>Developed by <a href="https://krzjoa.github.io" class="external-link">Krzysztof
-Joachimiak</a>.</p>
+  <p></p><p>Developed by <a href="https://krzjoa.github.io" class="external-link">Krzysztof Joachimiak</a>.</p>
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a>
-2.0.1.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.</p>
 </div>
 
       </footer></div>

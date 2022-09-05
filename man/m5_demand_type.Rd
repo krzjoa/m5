@@ -7,20 +7,22 @@
 m5_demand_type(data)
 }
 \arguments{
-\item{data}{The result of the `m5_prepare` function.}
+\item{data}{The result of the \code{m5_prepare} function.}
 }
 \value{
-A `data.frame` containing item ids, ADI and CV2 scores as well as the final
+A \code{data.frame} containing item ids, ADI and CV2 scores as well as the final
 class chosen based on the aforementioned scores.
 }
 \description{
 Each time series in the dataset can be assigned one of the following classes:
 }
 \details{
-* Smooth (ADI < 1.32 and CV² < 0.49).
-* Intermittent  (ADI >= 1.32 and CV² < 0.49)
-* Erratic (ADI < 1.32 and CV² >= 0.49)
-* Lumpy (ADI >= 1.32 and CV² >= 0.49)
+\itemize{
+\item Smooth (ADI < 1.32 and CV² < 0.49).
+\item Intermittent  (ADI >= 1.32 and CV² < 0.49)
+\item Erratic (ADI < 1.32 and CV² >= 0.49)
+\item Lumpy (ADI >= 1.32 and CV² >= 0.49)
+}
 }
 \examples{
 \dontrun{
@@ -33,11 +35,10 @@ c(sales_train,
 m5_data  <-
    m5_prepare(sales_train, sales_test, calendar, sell_prices)
 
-
 m5_demand <- m5_demand_type(m5_data)
 }
 
 }
 \references{
-[Forecast Error Measures: Intermittent Demand](https://deep-and-shallow.com/2020/10/07/forecast-error-measures-intermittent-demand/)
+\href{https://deep-and-shallow.com/2020/10/07/forecast-error-measures-intermittent-demand/}{Forecast Error Measures: Intermittent Demand}
 }

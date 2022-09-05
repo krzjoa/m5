@@ -19,3 +19,9 @@ Suggests:
     knitr,
     rmarkdown
 VignetteBuilder: knitr
+Imports: 
+    data.table,
+    stringi,
+    dplyr,
+    lubridate
+Roxygen: list(markdown = TRUE)

@@ -1,22 +1,4 @@
-#' Taken from https://github.com/trnnick/tsutils/blob/master/R/leadtrail.R
-#'
-#' Remove leading/training zeros/NAs
-#'
-#' Remove leading or trailing zeros or NAs from a vector.
-#'
-#' @param x vector of values to check.
-#' @param rm what to remove, can be \code{"zeros"} or \code{"na"}.
-#' @param lead If \code{TRUE}, then leading values are removed.
-#' @param trail If \code{TRUE}, then trailing values are removed.
-#'
-#' @return Resulting vector.
-#'
-#' @author Nikolaos Kourentzes, \email{nikolaos@kourentzes.com}.
-#'
-#' @examples
-#' x <- c(rep(0,5),rnorm(100),rep(0,5))
-#' leadtrail(x)
-#'
+# Taken from https://github.com/trnnick/tsutils/blob/master/R/leadtrail.R
 leadtrail <- function(x,rm=c("zeros","na"),lead=c(TRUE,FALSE),trail=c(TRUE,FALSE)){
 
   # Defaults
@@ -81,9 +63,9 @@ leadtrail <- function(x,rm=c("zeros","na"),lead=c(TRUE,FALSE),trail=c(TRUE,FALSE
 
 
 
-#' https://deep-and-shallow.com/2020/10/07/forecast-error-measures-intermittent-demand/
-#' Helper functions
-#' Consider moving them into a separate package
+# https://deep-and-shallow.com/2020/10/07/forecast-error-measures-intermittent-demand/
+# Helper functions
+# Consider moving them into a separate package
 adi <- function(x, ...){
   # sequences <- rle(x > 0)
   # n_seq <- length(sequences$values)
@@ -92,7 +74,7 @@ adi <- function(x, ...){
   length(x) / sum(x > 0)
 }
 
-#' CV²
+# CV²
 cv2 <- function(x, ...){
   x <- x[x > 0]
   (sd(x) / mean(x)) ^ 2
@@ -129,7 +111,6 @@ cv2 <- function(x, ...){
 #'
 #' m5_data  <-
 #'    m5_prepare(sales_train, sales_test, calendar, sell_prices)
-#'
 #'
 #' m5_demand <- m5_demand_type(m5_data)
 #' }
