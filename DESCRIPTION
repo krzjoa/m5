@@ -18,8 +18,10 @@ URL: https://github.com/krzjoa/m5, https://krzjoa.github.io/m5/
 RoxygenNote: 7.1.2
 License: MIT + file LICENSE
 Suggests: 
+    ggplot2,
     knitr,
-    rmarkdown
+    rmarkdown,
+    zeallot
 VignetteBuilder: knitr
 Imports: 
     data.table,
