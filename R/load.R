@@ -1,5 +1,5 @@
 #' @name m5_get_raw
-#' @title Load raw CSV files using data.table::fread function
+#' @title Load raw CSV files using [data.table::fread()] function
 #'
 #' @param path The directory with the unzipped M5 data files
 #'
