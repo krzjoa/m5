@@ -9,6 +9,7 @@
 status](https://www.r-pkg.org/badges/version/m5)](https://CRAN.R-project.org/package=m5)
 [![Buy hex
 stciker](https://img.shields.io/badge/buy%20hex-m5-green?style=flat&logo=redbubble)](https://www.redbubble.com/i/sticker/m5-R-package-hex-by-krzjoa/122633859.EJUG5)
+[![R-CMD-check](https://github.com/krzjoa/m5/workflows/R-CMD-check/badge.svg)](https://github.com/krzjoa/m5/actions)
 <!-- badges: end -->
 
 > M5 Walmart Challenge Data

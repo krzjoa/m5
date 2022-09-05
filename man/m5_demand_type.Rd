@@ -17,11 +17,27 @@ class chosen based on the aforementioned scores.
 Each time series in the dataset can be assigned one of the following classes:
 }
 \details{
-* Intermittent
-* Lumpy
-* Smooth
-* Erratic
+* Smooth (ADI < 1.32 and CV² < 0.49).
+* Intermittent  (ADI >= 1.32 and CV² < 0.49)
+* Erratic (ADI < 1.32 and CV² >= 0.49)
+* Lumpy (ADI >= 1.32 and CV² >= 0.49)
+}
+\examples{
+\dontrun{
+m5_download('data')
+c(sales_train,
+  sales_test,
+  sell_prices,
+  calendar) \%<-\% m5_get_raw_evaluation('data')
+
+m5_data  <-
+   m5_prepare(sales_train, sales_test, calendar, sell_prices)
+
+
+m5_demand <- m5_demand_type(m5_data)
+}
+
 }
 \references{
-
+[Forecast Error Measures: Intermittent Demand](https://deep-and-shallow.com/2020/10/07/forecast-error-measures-intermittent-demand/)
 }

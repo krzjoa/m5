@@ -34,7 +34,7 @@ NULL
   Map(data.table::fread, files)
 }
 
-#' @rdname m5_get_raw_*
+#' @rdname m5_get_raw
 #' @export
 m5_get_raw_evaluation <- function(path){
   files <- c(
@@ -47,7 +47,7 @@ m5_get_raw_evaluation <- function(path){
   .abstract_get_raw(path, files)
 }
 
-#' @rdname m5_get_raw_*
+#' @rdname m5_get_raw
 #' @export
 m5_get_raw_validation <- function(path){
   files <- c(

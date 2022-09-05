@@ -1,6 +1,7 @@
 destination: docs
 template:
   params:
+    bootstrap: 5
     bootswatch: cosmo
 authors:
   Krzysztof Joachimiak:
@@ -9,8 +10,7 @@ reference:
 - title: m5 API
   contents:
   - m5_download
-  - m5_get_raw_evaluation
-  - m5_get_raw_validation
+  - m5_get_raw
   - m5_prepare
   - m5_demand_type
   - tiny_m5

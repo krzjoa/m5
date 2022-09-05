@@ -9,6 +9,11 @@
 #' \dontrun{
 #' m5_download('data')
 #' }
+#'
+#' @references
+#' * [M5 Forecasting - Accuracy](https://www.kaggle.com/c/m5-forecasting-accuracy)
+#' * [M5 Forecasting - Uncertainty](https://www.kaggle.com/c/m5-forecasting-uncertainty)
+#'
 #' @export
 m5_download <- function(path, unzip=TRUE){
   url <- "https://github.com/krzjoa/m5-data/raw/main/datasets/m5.zip"

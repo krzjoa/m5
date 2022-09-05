@@ -1,6 +1,7 @@
 pandoc: 2.17.1.1
 pkgdown: 2.0.1
 pkgdown_sha: ~
-articles: {}
-last_built: 2022-09-02T21:43Z
+articles:
+  demand_classification: demand_classification.html
+last_built: 2022-09-05T21:07Z
 

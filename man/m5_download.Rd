@@ -20,4 +20,9 @@ Download and unzip the raw data to the specified directory
 \dontrun{
 m5_download('data')
 }
+
+}
+\references{
+* [M5 Forecasting - Accuracy](https://www.kaggle.com/c/m5-forecasting-accuracy)
+* [M5 Forecasting - Uncertainty](https://www.kaggle.com/c/m5-forecasting-uncertainty)
 }

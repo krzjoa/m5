@@ -107,15 +107,19 @@ cv2 <- function(x, ...){
 #' * Intermittent  (ADI >= 1.32 and CV² < 0.49)
 #' * Erratic (ADI < 1.32 and CV² >= 0.49)
 #' * Lumpy (ADI >= 1.32 and CV² >= 0.49)
-
+#'
 #' @param data The result of the `m5_prepare` function.
 #'
 #' @returns
 #' A `data.frame` containing item ids, ADI and CV2 scores as well as the final
 #' class chosen based on the aforementioned scores.
 #'
+#' @import data.table
 #'
 #' @references
+#' [Forecast Error Measures: Intermittent Demand](https://deep-and-shallow.com/2020/10/07/forecast-error-measures-intermittent-demand/)
+#'
+#' @examples
 #' \dontrun{
 #' m5_download('data')
 #' c(sales_train,
@@ -125,7 +129,7 @@ cv2 <- function(x, ...){
 #'
 #' m5_data  <-
 #'    m5_prepare(sales_train, sales_test, calendar, sell_prices)
-#' }
+#'
 #'
 #' m5_demand <- m5_demand_type(m5_data)
 #' }
