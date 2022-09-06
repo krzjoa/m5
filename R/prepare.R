@@ -24,13 +24,19 @@
 #'    m5_prepare(sales_train, sales_test, calendar, sell_prices)
 #' }
 #'
-#' @import dplyr data.table
+#' @import data.table
 #' @export
 m5_prepare <- function(sales_train, sales_test,
                        calendar, sell_prices){
 
   # Optimized
   # See: https://stackoverflow.com/questions/34598139/left-join-using-data-table
+
+  # A hack to pass CRAN check
+  # See: https://www.r-bloggers.com/2019/08/no-visible-binding-for-global-variable/
+  variable <- d <- state_id <- . <- wm_yr_wk <- weekday <- event_name_1 <-
+    event_type_1 <- event_name_2 <- event_type_2 <- snap <- store_id <-
+    item_id <- sell_price <- NULL
 
   # Pivot
   .cols <- colnames(sales_train)[6:length(colnames(sales_train))]

@@ -38,6 +38,7 @@
 #' [Other Walmart datasets in timetk](https://business-science.github.io/timetk/reference/index.html#section-time-series-datasets)
 #'
 #' @examples
+#' library(m5)
 #' # Head of tiny_m5
 #' head(tiny_m5)
 "tiny_m5"

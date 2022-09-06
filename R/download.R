@@ -10,6 +10,8 @@
 #' m5_download('data')
 #' }
 #'
+#' @importFrom utils download.file
+#'
 #' @references
 #' * [M5 Forecasting - Accuracy](https://www.kaggle.com/c/m5-forecasting-accuracy)
 #' * [M5 Forecasting - Uncertainty](https://www.kaggle.com/c/m5-forecasting-uncertainty)

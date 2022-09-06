@@ -1,4 +1,5 @@
 /home/krzysztof/Pulpit/m5/.Rbuildignore="2B19D3A0"
+/home/krzysztof/Pulpit/m5/.github/workflows/check-standard.yaml="27BAE3B6"
 /home/krzysztof/Pulpit/m5/.gitignore="27CF290E"
 /home/krzysztof/Pulpit/m5/DESCRIPTION="359D258D"
 /home/krzysztof/Pulpit/m5/LICENSE="96CB203D"
@@ -14,5 +15,4 @@
 /home/krzysztof/Pulpit/m5/README.md="4574F82A"
 /home/krzysztof/Pulpit/m5/_pkgdown.yml="119681F7"
 /home/krzysztof/Pulpit/m5/data-raw/prepare-m5.R="56821EA1"
-/home/krzysztof/Pulpit/m5/man/cv2.Rd="5589A7BB"
 /home/krzysztof/Pulpit/m5/vignettes/demand_classification.Rmd="63E5CF4E"

@@ -4,7 +4,7 @@
 \alias{m5_get_raw}
 \alias{m5_get_raw_evaluation}
 \alias{m5_get_raw_validation}
-\title{Load raw CSV files using data.table::fread function}
+\title{Load raw CSV files using \code{\link[data.table:fread]{data.table::fread()}} function}
 \usage{
 m5_get_raw_evaluation(path)
 
@@ -24,7 +24,7 @@ The function returns a list of five data.tables:
 }
 }
 \description{
-Load raw CSV files using data.table::fread function
+Load raw CSV files using \code{\link[data.table:fread]{data.table::fread()}} function
 }
 \examples{
 \dontrun{

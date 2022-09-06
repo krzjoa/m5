@@ -9,3 +9,11 @@
 ^\.travis\.yml$
 ^codecov\.yml$
 ^\.github$
+\.csv
+\.zip
+data
+data-raw
+data-test
+^pkgdown
+^docs
+_pkgdown.yml

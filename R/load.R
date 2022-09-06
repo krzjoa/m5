@@ -5,7 +5,6 @@
 #'
 #' @returns
 #' The function returns a list of five data.tables:
-#'
 #' * sales_train (evaluation/validation)
 #' * sales_test (evaluation/validation)
 #' * sell_prices

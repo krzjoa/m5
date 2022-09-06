@@ -115,8 +115,16 @@ cv2 <- function(x, ...){
 #' m5_demand <- m5_demand_type(m5_data)
 #' }
 #'
+#' @importFrom stats sd
+#' @importFrom utils tail
+#'
 #' @export
 m5_demand_type <- function(data){
+
+  # A hack to pass CRAN check
+  # See: https://www.r-bloggers.com/2019/08/no-visible-binding-for-global-variable/
+  . <- value <- item_id <- store_id <- demand_type <-  NULL
+
   data[, .(
       # adi = adi(value),
       # cv2 = cv2(value),
