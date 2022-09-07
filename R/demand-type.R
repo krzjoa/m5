@@ -90,30 +90,21 @@ cv2 <- function(x, ...){
 #' * Erratic (ADI < 1.32 and CV² >= 0.49)
 #' * Lumpy (ADI >= 1.32 and CV² >= 0.49)
 #'
-#' @param data The result of the `m5_prepare` function.
+#' @param data The result of the `m5_prepare` function; `tiny_m5` can be passed as well.
 #'
 #' @returns
-#' A `data.frame` containing item ids, ADI and CV2 scores as well as the final
-#' class chosen based on the aforementioned scores.
+#' A `data.table` containing item ids (`item_id` and `store_id`),
+#' ADI and CV2 scores (`adi` and `cv2` respectively) as well as the final
+#' class chosen based on the aforementioned scores (`demand_type`).
 #'
 #' @import data.table
 #'
 #' @references
+#' [Syntetos A. A. and Boylan J. E., 2005, The accuracy of intermittent demand estimates. International Journal of Forecasting 21: 303–314](https://www.sciencedirect.com/science/article/abs/pii/S0169207004000792?via%3Dihub)
 #' [Forecast Error Measures: Intermittent Demand](https://deep-and-shallow.com/2020/10/07/forecast-error-measures-intermittent-demand/)
 #'
 #' @examples
-#' \dontrun{
-#' m5_download('data')
-#' c(sales_train,
-#'   sales_test,
-#'   sell_prices,
-#'   calendar) %<-% m5_get_raw_evaluation('data')
-#'
-#' m5_data  <-
-#'    m5_prepare(sales_train, sales_test, calendar, sell_prices)
-#'
-#' m5_demand <- m5_demand_type(m5_data)
-#' }
+#' head(m5_demand_type(tiny_m5))
 #'
 #' @importFrom stats sd
 #' @importFrom utils tail

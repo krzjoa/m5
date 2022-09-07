@@ -5,6 +5,14 @@
 #' Default: TRUE. The `exdir` argument in the `unzip` function is the directory
 #' name the file was downloaded into.
 #'
+#' @returns
+#' Returns nothing; the result of the function call is the `m5.zip` file
+#' downloading and extraction.
+#'
+#' @note
+#' If you struggle with timeout problems, please increase the timeout value
+#' using `options(timeout=<new_timeout_value>)`
+#'
 #' @examples
 #' \dontrun{
 #' m5_download('data')

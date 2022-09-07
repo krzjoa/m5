@@ -10,15 +10,39 @@
 #' @param calendar A data.frame with M5 calendar
 #' @param sell_prices A data.frame with M5 sell_prices
 #'
+#' @returns
+#'
+#' A `data.table` composed from input objects, which  contains the following columns:
+#' - *item_id*
+#' - *dept_id*
+#' - *cat_id*
+#' - *store_id*
+#' - *state_id*
+#' - *d* - day ordinal number
+#' - *value* - number of sold items
+#' - *wm_yr_wk* - week identifier
+#' - *weekday* - weekday name (character)
+#' - *wday* - weekday as an integer
+#' - *month*
+#' - *year*
+#' - *event_name_1* - special event name, like holidays etc.
+#' - *event_type_1* - special event type
+#' - *event_name_2* - as above
+#' - *event_type_2* - as above
+#' - *snap* - promotion flag
+#' - *sell_price*
+#'
 #' @examples
 #' library(m5)
 #' library(zeallot)
 #' \dontrun{
+#'
 #' m5_download('data')
 #' c(sales_train,
 #'   sales_test,
 #'   sell_prices,
-#'   calendar) %<-% m5_get_raw_evaluation('data')
+#'   calendar,
+#'   weights) %<-% m5_get_raw_evaluation('data')
 #'
 #' m5_data  <-
 #'    m5_prepare(sales_train, sales_test, calendar, sell_prices)

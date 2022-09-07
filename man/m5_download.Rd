@@ -13,8 +13,16 @@ m5_download(path, unzip = TRUE)
 Default: TRUE. The \code{exdir} argument in the \code{unzip} function is the directory
 name the file was downloaded into.}
 }
+\value{
+Returns nothing; the result of the function call is the \code{m5.zip} file
+downloading and extraction.
+}
 \description{
 Download and unzip the raw data to the specified directory
+}
+\note{
+If you struggle with timeout problems, please increase the timeout value
+using \verb{options(timeout=<new_timeout_value>)}
 }
 \examples{
 \dontrun{

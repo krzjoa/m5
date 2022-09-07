@@ -11,9 +11,9 @@
 ^\.github$
 \.csv
 \.zip
-data
 data-raw
 data-test
 ^pkgdown
 ^docs
 _pkgdown.yml
+vignettes\data

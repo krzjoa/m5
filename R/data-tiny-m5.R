@@ -3,7 +3,6 @@
 #' A piece of data cut from the training dataset used in the M5 challenges on Kaggle.
 #' M5 is a challenge from a series organized by Spyros Makridakis.
 #'
-#'
 #' @format
 #' \describe{
 #' \item{item_id}{The id of the product}

@@ -15,6 +15,29 @@ m5_prepare(sales_train, sales_test, calendar, sell_prices)
 
 \item{sell_prices}{A data.frame with M5 sell_prices}
 }
+\value{
+A \code{data.table} composed from input objects, which  contains the following columns:
+\itemize{
+\item \emph{item_id}
+\item \emph{dept_id}
+\item \emph{cat_id}
+\item \emph{store_id}
+\item \emph{state_id}
+\item \emph{d} - day ordinal number
+\item \emph{value} - number of sold items
+\item \emph{wm_yr_wk} - week identifier
+\item \emph{weekday} - weekday name (character)
+\item \emph{wday} - weekday as an integer
+\item \emph{month}
+\item \emph{year}
+\item \emph{event_name_1} - special event name, like holidays etc.
+\item \emph{event_type_1} - special event type
+\item \emph{event_name_2} - as above
+\item \emph{event_type_2} - as above
+\item \emph{snap} - promotion flag
+\item \emph{sell_price}
+}
+}
 \description{
 It's a memory-efficient function, which uses \code{data.table} under the hood.
 However, it still not recommended to use this function on PCs with < 16GB RAM.
@@ -25,11 +48,13 @@ based on \verb{[arrow](https://arrow.apache.org/docs/r/)} or \verb{[disk.frame](
 library(m5)
 library(zeallot)
 \dontrun{
+
 m5_download('data')
 c(sales_train,
   sales_test,
   sell_prices,
-  calendar) \%<-\% m5_get_raw_evaluation('data')
+  calendar,
+  weights) \%<-\% m5_get_raw_evaluation('data')
 
 m5_data  <-
    m5_prepare(sales_train, sales_test, calendar, sell_prices)

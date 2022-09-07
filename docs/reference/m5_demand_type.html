@@ -17,7 +17,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">m5</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.1.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.1.1</span>
       </span>
     </div>
 
@@ -35,7 +35,13 @@
       <a href="../articles/demand_classification.html">Demand classification</a>
     </li>
   </ul></li>
-      </ul><ul class="nav navbar-nav navbar-right"></ul></div><!--/.nav-collapse -->
+      </ul><ul class="nav navbar-nav navbar-right"><li>
+  <a href="https://github.com/krzjoa/m5/" class="external-link">
+    <span class="fab fa-github fa-lg"></span>
+     
+  </a>
+</li>
+      </ul></div><!--/.nav-collapse -->
   </div><!--/.container -->
 </div><!--/.navbar -->
 
@@ -45,7 +51,7 @@
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Classify time series of the particular items</h1>
-    
+    <small class="dont-index">Source: <a href="https://github.com/krzjoa/m5/blob/HEAD/R/demand-type.R" class="external-link"><code>R/demand-type.R</code></a></small>
     <div class="hidden name"><code>m5_demand_type.Rd</code></div>
     </div>
 
@@ -67,8 +73,9 @@
     <h2>Value</h2>
     
 
-<p>A <code>data.frame</code> containing item ids, ADI and CV2 scores as well as the final
-class chosen based on the aforementioned scores.</p>
+<p>A <code>data.table</code> containing item ids (<code>item_id</code> and <code>store_id</code>),
+ADI and CV2 scores (<code>adi</code> and <code>cv2</code> respectively) as well as the final
+class chosen based on the aforementioned scores (<code>demand_type</code>).</p>
     </div>
     <div id="details">
     <h2>Details</h2>
@@ -80,7 +87,8 @@ class chosen based on the aforementioned scores.</p>
 </ul></div>
     <div id="references">
     <h2>References</h2>
-    <p><a href="https://deep-and-shallow.com/2020/10/07/forecast-error-measures-intermittent-demand/" class="external-link">Forecast Error Measures: Intermittent Demand</a></p>
+    <p><a href="https://www.sciencedirect.com/science/article/abs/pii/S0169207004000792?via%3Dihub" class="external-link">Syntetos A. A. and Boylan J. E., 2005, The accuracy of intermittent demand estimates. International Journal of Forecasting 21: 303–314</a>
+<a href="https://deep-and-shallow.com/2020/10/07/forecast-error-measures-intermittent-demand/" class="external-link">Forecast Error Measures: Intermittent Demand</a></p>
     </div>
 
     <div id="ref-examples">
